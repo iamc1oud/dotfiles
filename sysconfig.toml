@@ -1,0 +1,16 @@
+version = 1
+
+[[files]]
+target = "~/.config/helix"
+repo = "helix"
+mode = "copy"
+
+[[files]]
+target = "~/.config/nvim"
+repo = "nvim"
+mode = "copy"
+
+[[files]]
+target = "~/.opencode"
+repo = "opencode"
+mode = "copy"

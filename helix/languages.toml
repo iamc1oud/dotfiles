@@ -1,0 +1,40 @@
+[[language]]
+name = "python"
+language-servers = ["ty"]
+formatter = { command = "ruff", args=["format", "--stdin-filename", "%{buffer_name}", "-"]}
+auto-format = true
+
+[language.debugger]
+name = "debugpy"
+transport = "stdio"
+command = "python3"
+args = ["-m", "debugpy.adapter"]
+
+[[language.debugger.templates]]
+name = "launch"
+request = "launch"
+completion = [ { name = "program", completion = "filename" } ]
+args = { mode = "debug", program = "{0}" }
+
+
+[[language]]
+name = "rust"
+formatter = { command = "rustfmt", args = ["--edition", "2021"] }
+auto-format = true
+
+[language.debugger]
+name = "lldb-dap"
+transport = "stdio"
+command = "/Library/Developer/CommandLineTools/usr/bin/lldb-dap"
+
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+completion = [ { name = "binary", completion = "filename" } ]
+args = { program = "{0}" }
+
+[[language.debugger.templates]]
+name = "attach"
+request = "attach"
+completion = [ "pid" ]
+args = { pid = "{0}" }

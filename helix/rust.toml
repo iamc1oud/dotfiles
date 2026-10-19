@@ -1,0 +1,7 @@
+[[language]]
+name = "rust"
+
+[language.debugger]
+name = "lldp-dap"
+transport = "stdio"
+command = /Library/Developer/CommandLineTools/usr/bin/lldb-dap
