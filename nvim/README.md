@@ -1,5 +1,6 @@
 # Neovim Configuration with OLLAMA AI Support
 
+Hello world
 ## Overview
 This Neovim configuration includes:
 - **Full Python support** via pynvim
