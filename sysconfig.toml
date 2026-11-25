@@ -14,3 +14,8 @@ mode = "copy"
 target = "~/.opencode"
 repo = "opencode"
 mode = "copy"
+
+[[files]]
+target = "~/.claude/skills"
+repo = "claude/skills"
+mode = "copy"
